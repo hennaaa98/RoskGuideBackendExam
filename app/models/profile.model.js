@@ -17,9 +17,6 @@ module.exports = (sequelize, Sequelize) => {
     p_location: {
       type: Sequelize.STRING
     },
-    // t_location: {
-    //   type: Sequelize.STRING
-    // },
     password: {
       type: Sequelize.STRING
     },

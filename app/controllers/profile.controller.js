@@ -45,29 +45,3 @@ exports.login = (req, res) => {
       });
   
 };
-
-// Update a profile by the id in the request
-exports.update = (req, res) => {
-    const id = req.params.id;
-
-    Profile.update(req.body, {
-      where: { id: id }
-    })
-      .then(num => {
-        if (num == 1) {
-          res.send({
-            message: "Profile was updated successfully."
-          });
-        } else {
-          res.send({
-            message: `Cannot update profile with id=${id}. Maybe profile was not found or req.body is empty!`
-          });
-        }
-      })
-      .catch(err => {
-        res.status(500).send({
-          message: "Error updating profile with id=" + id
-        });
-      });
-  
-};

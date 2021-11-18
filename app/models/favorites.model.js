@@ -1,18 +1,15 @@
 module.exports = (sequelize, Sequelize) => {
   const Favorites = sequelize.define("favorites", {
-    profile_id: {
+    favorites_id: {
       type: Sequelize.INTEGER,
-      references: {
-        model: sequelize.Profile,
-        key: 'profile_id'
-      }
+      primaryKey: true,
+      autoIncrement: true
+    },
+    profile_id: {
+      type: Sequelize.INTEGER
     },
     location_id: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: sequelize.Location,
-        key: 'location_id'
-      }
+      type: Sequelize.INTEGER
     }
   });
 

@@ -14,12 +14,14 @@ module.exports = (sequelize, Sequelize) => {
     location_openinghours: {
       type: Sequelize.STRING
     },
-    location_type: {
-      type: Sequelize.STRING,
-      references: {
-        model: sequelize.Locationtype,
-        key: 'type_id'
-     }
+    location_website: {
+      type: Sequelize.STRING
+    },
+    location_lat: {
+      type: Sequelize.INTEGER
+    },
+    location_lng: {
+      type: Sequelize.INTEGER
     }
   });
 
