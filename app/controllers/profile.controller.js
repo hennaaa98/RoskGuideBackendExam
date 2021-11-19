@@ -11,7 +11,6 @@ exports.create = (req, res) => {
     email: req.body.email,
     telephone: req.body.telephone,
     p_location: req.body.p_location,
-    t_location: req.body.t_location,
     password: req.body.password
   };
 
