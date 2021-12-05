@@ -15,6 +15,9 @@ db.sequelize = sequelize;
 
 db.profile = require("./profile.model.js")(sequelize, Sequelize);
 db.location = require("./location.model.js")(sequelize, Sequelize);
-db.favorites = require("./favorites.model.js")(sequelize, Sequelize);
+db.quiz = require("./quiz.model.js")(sequelize, Sequelize);
+db.question = require("./question.model.js")(sequelize, Sequelize);
+db.option = require("./option.model.js")(sequelize, Sequelize);
+
 
 module.exports = db;

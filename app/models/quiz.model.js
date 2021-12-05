@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
-  const Favorites = sequelize.define("favorites", {
-    favorites_id: {
+  const Quiz = sequelize.define("quiz", {
+    quiz_id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
       autoIncrement: true
@@ -10,8 +10,11 @@ module.exports = (sequelize, Sequelize) => {
     },
     location_id: {
       type: Sequelize.INTEGER
+    },
+    isComplete: {
+      type: Sequelize.BOOLEAN
     }
   });
 
-  return Favorites;
+  return Quiz;
 };

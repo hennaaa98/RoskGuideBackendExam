@@ -1,7 +1,8 @@
 module.exports = app => {
   const profile = require("../controllers/profile.controller.js");
-  const favorites = require("../controllers/favorites.controller.js");
   const location = require("../controllers/location.controller.js");
+  const quiz = require("../controllers/quiz.controller.js");
+
 
   var router = require("express").Router();
 
@@ -13,6 +14,8 @@ module.exports = app => {
 
   // Retrieve all locations
   router.get("/location", location.findAll);
+
+  router.get("/quiz", quiz.findOne);
 
   // Retrieve all favorites
   // router.get("/favorites", favorites.findAllByProfileId);
